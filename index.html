@@ -1,0 +1,1998 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Joga Uday Vishnu Reddy | Data Scientist & Data Analyst</title>
+
+<style>
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3eadb;
+    color: #2d2925;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    min-height: 100vh;
+    padding: 110px 7% 70px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -2;
+
+    background-image:
+        linear-gradient(
+            rgba(100,80,55,0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(100,80,55,0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 55px 55px;
+}
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    width: 500px;
+    height: 500px;
+
+    top: 100px;
+    left: -200px;
+
+    background: rgba(190,160,115,0.12);
+
+    filter: blur(100px);
+
+    border-radius: 50%;
+
+    z-index: -1;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+header {
+
+    position: fixed;
+
+    top: 15px;
+    left: 3%;
+    right: 3%;
+
+    height: 70px;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 25px;
+
+    border: 1px solid #d6c7b1;
+
+    border-radius: 40px;
+
+    background: rgba(248,240,228,0.92);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 8px 30px rgba(80,60,40,0.08);
+}
+
+.logo-area {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.logo {
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #40382f;
+
+    color: #f5eadb;
+
+    font-weight: bold;
+
+    font-size: 17px;
+}
+
+.logo-text small {
+
+    display: block;
+
+    color: #8b7355;
+
+    letter-spacing: 4px;
+
+    font-size: 10px;
+}
+
+.logo-text strong {
+
+    font-size: 15px;
+
+    color: #302b26;
+}
+
+nav {
+
+    display: flex;
+
+    gap: 4px;
+}
+
+nav a {
+
+    padding: 11px 17px;
+
+    border-radius: 25px;
+
+    color: #51483f;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+
+    background: #40382f;
+
+    color: #f7eddf;
+}
+
+
+/* =====================================================
+   HOME
+===================================================== */
+
+#home {
+
+    display: flex;
+
+    align-items: center;
+}
+
+.hero {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.tag {
+
+    display: inline-block;
+
+    padding: 9px 18px;
+
+    border: 1px solid #cbb99f;
+
+    border-radius: 30px;
+
+    color: #806a4d;
+
+    background: rgba(255,255,255,0.35);
+
+    margin-bottom: 25px;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+
+    font-size: clamp(45px,6vw,76px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+
+    color: #302b26;
+}
+
+.gradient {
+
+    color: #8a6b45;
+}
+
+.hero p {
+
+    color: #675d53;
+
+    font-size: 19px;
+
+    max-width: 700px;
+
+    margin-bottom: 30px;
+}
+
+.buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+
+    padding: 14px 24px;
+
+    border-radius: 12px;
+
+    border: 1px solid #cdbda7;
+
+    background: rgba(255,255,255,0.45);
+
+    color: #40382f;
+
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+
+.btn:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 25px rgba(80,60,40,0.12);
+}
+
+.primary {
+
+    background: #40382f;
+
+    color: #f7eddf;
+
+    border-color: #40382f;
+}
+
+
+/* =====================================================
+   PROFILE CARD
+===================================================== */
+
+.hero-card {
+
+    position: relative;
+
+    min-height: 500px;
+
+    border-radius: 45px;
+
+    background: #e8dcc9;
+
+    border: 1px solid #d1bea3;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    box-shadow: 0 20px 50px rgba(80,60,40,0.10);
+}
+
+.hero-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    border: 1px solid #cdb99c;
+}
+
+.hero-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 270px;
+    height: 270px;
+
+    border-radius: 50%;
+
+    border: 1px solid #d5c5ad;
+}
+
+.profile {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+}
+
+.profile img {
+
+    width: 220px;
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 35px;
+
+    border: 7px solid #d1c0a8;
+
+    background: #f7efe3;
+
+    box-shadow: 0 15px 35px rgba(70,50,30,0.15);
+}
+
+.profile h2 {
+
+    color: #51402e;
+
+    letter-spacing: 2px;
+
+    font-size: 18px;
+
+    margin-top: 25px;
+}
+
+.profile p {
+
+    color: #716352;
+
+    margin-top: 8px;
+}
+
+
+/* =====================================================
+   SECTION TITLES
+===================================================== */
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 55px;
+}
+
+.section-title span {
+
+    display: inline-block;
+
+    color: #806a4d;
+
+    border: 1px solid #cdbb9f;
+
+    background: rgba(255,255,255,0.3);
+
+    padding: 8px 18px;
+
+    border-radius: 25px;
+
+    letter-spacing: 3px;
+
+    font-size: 12px;
+}
+
+.section-title h2 {
+
+    font-size: 48px;
+
+    margin: 15px 0;
+
+    color: #302b26;
+}
+
+.section-title p {
+
+    color: #74695d;
+
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+.card {
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    background: #f8f0e4;
+
+    border: 1px solid #dac9b2;
+
+    box-shadow: 0 10px 30px rgba(80,60,40,0.06);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+
+    transform: translateY(-6px);
+}
+
+.card h3 {
+
+    color: #735a3d;
+
+    margin-bottom: 15px;
+
+    font-size: 23px;
+}
+
+.card p {
+
+    color: #685e54;
+}
+
+
+/* =====================================================
+   EDUCATION
+===================================================== */
+
+.education-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+.education-card {
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background: #f8f0e4;
+
+    border: 1px solid #dac9b2;
+
+    box-shadow: 0 10px 30px rgba(80,60,40,0.06);
+
+    transition: 0.3s;
+}
+
+.education-card:hover {
+
+    transform: translateY(-6px);
+}
+
+.education-card h3 {
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+
+    color: #342e28;
+}
+
+.college {
+
+    color: #806746;
+
+    font-size: 17px;
+
+    font-weight: bold;
+}
+
+.year {
+
+    color: #887b6d;
+
+    margin: 12px 0;
+}
+
+.education-card p {
+
+    color: #6c6257;
+}
+
+.download {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 10px 17px;
+
+    border-radius: 10px;
+
+    background: #40382f;
+
+    color: #f8eee1;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.download:hover {
+
+    transform: translateY(-3px);
+
+    background: #66533c;
+}
+
+
+/* =====================================================
+   SKILLS
+===================================================== */
+
+.skills-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 25px;
+}
+
+.skill-card {
+
+    padding: 30px;
+
+    background: #f8f0e4;
+
+    border: 1px solid #dac9b2;
+
+    border-radius: 22px;
+
+    box-shadow: 0 10px 30px rgba(80,60,40,0.06);
+
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+
+    transform: translateY(-5px);
+}
+
+.skill-card h3 {
+
+    color: #735a3d;
+
+    margin-bottom: 20px;
+
+    font-size: 21px;
+}
+
+.skills {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+}
+
+.skill {
+
+    padding: 8px 13px;
+
+    background: #eadfce;
+
+    border: 1px solid #d8c7ad;
+
+    border-radius: 20px;
+
+    color: #55483a;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   EXPERIENCE
+===================================================== */
+
+.timeline {
+
+    max-width: 900px;
+
+    margin: auto;
+}
+
+.experience {
+
+    padding: 32px;
+
+    margin-bottom: 25px;
+
+    border-left: 4px solid #806546;
+
+    background: #f8f0e4;
+
+    border-radius: 0 20px 20px 0;
+
+    border-top: 1px solid #dac9b2;
+
+    border-right: 1px solid #dac9b2;
+
+    border-bottom: 1px solid #dac9b2;
+
+    box-shadow: 0 10px 30px rgba(80,60,40,0.06);
+}
+
+.experience h3 {
+
+    font-size: 24px;
+
+    color: #302b26;
+}
+
+.experience h4 {
+
+    color: #806546;
+
+    margin: 5px 0;
+}
+
+.experience p {
+
+    color: #675d53;
+
+    margin-top: 10px;
+}
+
+
+/* =====================================================
+   PROJECTS
+===================================================== */
+
+.projects {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+.project {
+
+    padding: 32px;
+
+    border-radius: 25px;
+
+    background: #f8f0e4;
+
+    border: 1px solid #dac9b2;
+
+    box-shadow: 0 10px 30px rgba(80,60,40,0.06);
+
+    transition: 0.3s;
+}
+
+.project:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow: 0 18px 40px rgba(80,60,40,0.12);
+}
+
+.project-number {
+
+    color: #927450;
+
+    letter-spacing: 3px;
+
+    font-size: 13px;
+}
+
+.project h3 {
+
+    font-size: 24px;
+
+    margin: 10px 0 15px;
+
+    color: #332d27;
+}
+
+.project p {
+
+    color: #675d53;
+}
+
+.tech {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 20px;
+}
+
+.tech span {
+
+    padding: 6px 11px;
+
+    background: #eadfce;
+
+    border: 1px solid #d8c7ad;
+
+    border-radius: 15px;
+
+    color: #5c4c3b;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-box {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+
+    padding: 50px;
+
+    border-radius: 30px;
+
+    background: #f8f0e4;
+
+    border: 1px solid #dac9b2;
+
+    box-shadow: 0 10px 30px rgba(80,60,40,0.07);
+}
+
+.contact-box h2 {
+
+    font-size: 40px;
+
+    color: #302b26;
+}
+
+.contact-box p {
+
+    color: #6e6357;
+
+    margin: 15px 0 30px;
+}
+
+.contact-links {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+.contact-link {
+
+    padding: 13px 22px;
+
+    border-radius: 12px;
+
+    background: #eadfce;
+
+    border: 1px solid #d4c2a8;
+
+    color: #5c4b38;
+
+    transition: 0.3s;
+}
+
+.contact-link:hover {
+
+    background: #40382f;
+
+    color: #f8eee1;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    text-align: center;
+
+    padding: 30px;
+
+    border-top: 1px solid #d8c7b0;
+
+    color: #817466;
+
+    background: #eee3d2;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:900px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid,
+    .education-grid,
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media(max-width:600px) {
+
+    section {
+        padding: 100px 5% 60px;
+    }
+
+    .logo-text {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .section-title h2 {
+        font-size: 38px;
+    }
+
+    .profile img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero-card {
+        min-height: 430px;
+    }
+
+    .contact-box {
+        padding: 35px 20px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header>
+
+<div class="logo-area">
+
+<div class="logo">
+UV
+</div>
+
+<div class="logo-text">
+
+<small>PORTFOLIO</small>
+
+<strong>
+Joga Uday Vishnu Reddy
+</strong>
+
+</div>
+
+</div>
+
+
+<nav>
+
+<a href="#home">Home</a>
+
+<a href="#about">About</a>
+
+<a href="#education">Education</a>
+
+<a href="#skills">Skills</a>
+
+<a href="#experience">Experience</a>
+
+<a href="#projects">Projects</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HOME
+===================================================== -->
+
+<section id="home">
+
+<div class="container">
+
+<div class="hero">
+
+
+<div>
+
+
+
+<h1>
+
+Turning Data Into
+
+<span class="gradient">
+Meaningful Insights.
+</span>
+
+</h1>
+
+
+<p>
+
+I'm <strong>Joga Uday Vishnu Reddy</strong>,
+an aspiring <strong>Data Scientist & Data Analyst </strong>
+with a strong foundation in Python, SQL, Power BI,
+Excel, Machine Learning and Statistical Analysis.
+
+</p>
+
+
+<div class="buttons">
+
+<a href="#contact" class="btn primary">
+Get In Touch
+</a>
+
+<a href="#projects" class="btn">
+View My Work
+</a>
+
+<a href="resume.pdf" class="btn primary" download>
+Download Resume
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="hero-card">
+
+<div class="profile">
+
+<img src="profile.jpg"
+     alt="Joga Uday Vishnu Reddy">
+
+<h2>
+DATA ANALYST & DATA SCIENTIST
+</h2>
+
+<p>
+Python • SQL • Machine Learning • Power BI
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>ABOUT ME</span>
+
+<h2>Who I Am</h2>
+
+<p>
+Passionate about data, analytics, machine learning and solving real-world problems.
+</p>
+
+</div>
+
+
+<div class="about-grid">
+
+
+<div class="card">
+
+<h3>👨‍💻 About Me</h3>
+
+<p>
+
+I am a postgraduate in Computer Applications
+with a strong interest in Data Analytics,
+Data Science, Python development, Business Intelligence
+and Machine Learning.
+
+</p>
+
+<br>
+
+<p>
+
+I enjoy cleaning and analyzing data,
+finding patterns, building machine learning models,
+creating dashboards and transforming raw data
+into meaningful insights.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🎯 Career Objective</h3>
+
+<p>
+
+My goal is to build a career in Data Analytics
+and Data Science where I can apply my analytical,
+programming, statistical, machine learning
+and visualization skills to solve real-world problems.
+
+</p>
+
+<br>
+
+<p>
+
+I continuously work on improving my skills in
+Python, SQL, Statistics, Machine Learning,
+Power BI, Excel and Data Science.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EDUCATION
+===================================================== -->
+
+<section id="education">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>EDUCATION</span>
+
+<h2>Academic Journey</h2>
+
+<p>
+My educational journey from school to postgraduate studies.
+</p>
+
+</div>
+
+
+<div class="education-grid">
+
+
+<!-- 10TH -->
+
+<div class="education-card">
+
+<h3>
+10th Class
+</h3>
+
+<div class="college">
+SVSN Siddhartha
+</div>
+
+<div class="year">
+📅 2018 – 2019
+</div>
+
+<p>
+Completed secondary school education.
+</p>
+
+<a href="marksheets/10th.pdf"
+class="download"
+download>
+
+📄 Download Marksheet
+
+</a>
+
+</div>
+
+
+
+<!-- INTER -->
+
+<div class="education-card">
+
+<h3>
+Intermediate
+</h3>
+
+<div class="college">
+Sri Medha Junior College
+</div>
+
+<div class="year">
+📅 2019 – 2021
+</div>
+
+<p>
+Completed intermediate education.
+</p>
+
+<a href="marksheets/inter.pdf"
+class="download"
+download>
+
+📄 Download Marksheet
+
+</a>
+
+</div>
+
+
+
+<!-- DEGREE -->
+
+<div class="education-card">
+
+<h3>
+B.Sc Computer Science
+</h3>
+
+<div class="college">
+Sri Venkateswara University
+</div>
+
+<div class="year">
+📅 2021 – 2024
+</div>
+
+<p>
+Completed undergraduate studies in Computer Science
+with a foundation in programming, databases and
+analytical problem solving.
+</p>
+
+<a href="marksheets/degree.pdf"
+class="download"
+download>
+
+📄 Download Marksheet
+
+</a>
+
+</div>
+
+
+
+<!-- MCA -->
+
+<div class="education-card">
+
+<h3>
+Master of Computer Applications (MCA)
+</h3>
+
+<div class="college">
+Sri Venkateswara College of Engineering
+</div>
+
+<div class="year">
+📅 2024 – 2026
+</div>
+
+<p>
+Postgraduate studies focused on computer applications,
+software development, data analytics, machine learning
+and modern computing technologies.
+</p>
+
+<a href="marksheets/mca.pdf"
+class="download"
+download>
+
+📄 Download Marksheet
+
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TECHNICAL SKILLS
+===================================================== -->
+
+<section id="skills">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>TECHNICAL SKILLS</span>
+
+<h2>My Skill Set</h2>
+
+<p>
+Technologies and analytical tools I work with.
+</p>
+
+</div>
+
+
+<div class="skills-grid">
+
+
+<!-- PROGRAMMING -->
+
+<div class="skill-card">
+
+<h3>💻 Programming</h3>
+
+<div class="skills">
+
+<span class="skill">Python</span>
+
+<span class="skill">SQL</span>
+
+<span class="skill">Object-Oriented Programming</span>
+
+<span class="skill">Functions</span>
+
+<span class="skill">Data Structures</span>
+
+</div>
+
+</div>
+
+
+
+<!-- DATA ANALYSIS -->
+
+<div class="skill-card">
+
+<h3>📊 Data Analysis</h3>
+
+<div class="skills">
+
+<span class="skill">NumPy</span>
+
+<span class="skill">Pandas</span>
+
+<span class="skill">Data Cleaning</span>
+
+<span class="skill">Data Preprocessing</span>
+
+<span class="skill">Data Wrangling</span>
+
+<span class="skill">EDA</span>
+
+<span class="skill">Statistical Analysis</span>
+
+<span class="skill">Data Transformation</span>
+
+</div>
+
+</div>
+
+
+
+<!-- DATA VISUALIZATION -->
+
+<div class="skill-card">
+
+<h3>📈 Data Visualization</h3>
+
+<div class="skills">
+
+<span class="skill">Matplotlib</span>
+
+<span class="skill">Seaborn</span>
+
+<span class="skill">Power BI</span>
+
+<span class="skill">Dashboard Development</span>
+
+<span class="skill">KPI Reporting</span>
+
+<span class="skill">Data Storytelling</span>
+
+</div>
+
+</div>
+
+
+
+<!-- MACHINE LEARNING -->
+
+<div class="skill-card">
+
+<h3>🤖 Machine Learning</h3>
+
+<div class="skills">
+
+<span class="skill">Machine Learning</span>
+
+<span class="skill">Supervised Learning</span>
+
+<span class="skill">Unsupervised Learning</span>
+
+<span class="skill">Feature Engineering</span>
+
+<span class="skill">Data Preprocessing</span>
+
+<span class="skill">Regression</span>
+
+<span class="skill">Classification</span>
+
+<span class="skill">Decision Trees</span>
+
+<span class="skill">Random Forest</span>
+
+<span class="skill">Clustering</span>
+
+<span class="skill">Train-Test Split</span>
+
+<span class="skill">Cross Validation</span>
+
+<span class="skill">Hyperparameter Tuning</span>
+
+<span class="skill">Model Evaluation</span>
+
+<span class="skill">Scikit-learn</span>
+
+</div>
+
+</div>
+
+
+
+<!-- DATA SCIENCE -->
+
+<div class="skill-card">
+
+<h3>🧠 Data Science</h3>
+
+<div class="skills">
+
+<span class="skill">Data Science</span>
+
+<span class="skill">Statistical Analysis</span>
+
+<span class="skill">Exploratory Data Analysis</span>
+
+<span class="skill">Predictive Modeling</span>
+
+<span class="skill">Model Building</span>
+
+<span class="skill">Model Evaluation</span>
+
+<span class="skill">Feature Engineering</span>
+
+<span class="skill">Data Visualization</span>
+
+<span class="skill">Python for Data Science</span>
+
+<span class="skill">Pandas</span>
+
+<span class="skill">NumPy</span>
+
+<span class="skill">Scikit-learn</span>
+
+</div>
+
+</div>
+
+
+
+<!-- BUSINESS INTELLIGENCE -->
+
+<div class="skill-card">
+
+<h3>📊 Business Intelligence</h3>
+
+<div class="skills">
+
+<span class="skill">Power BI</span>
+
+<span class="skill">DAX</span>
+
+<span class="skill">Power Query</span>
+
+<span class="skill">Dashboard Development</span>
+
+<span class="skill">KPI Reporting</span>
+
+<span class="skill">Data Modeling</span>
+
+<span class="skill">Interactive Reports</span>
+
+</div>
+
+</div>
+
+
+
+<!-- DATABASES -->
+
+<div class="skill-card">
+
+<h3>🗄️ Databases</h3>
+
+<div class="skills">
+
+<span class="skill">MySQL</span>
+
+<span class="skill">Joins</span>
+
+<span class="skill">Subqueries</span>
+
+<span class="skill">CTEs</span>
+
+<span class="skill">Window Functions</span>
+
+<span class="skill">Views</span>
+
+<span class="skill">Stored Procedures</span>
+
+</div>
+
+</div>
+
+
+
+<!-- EXCEL -->
+
+<div class="skill-card">
+
+<h3>📑 Excel</h3>
+
+<div class="skills">
+
+<span class="skill">Excel</span>
+
+<span class="skill">Pivot Tables</span>
+
+<span class="skill">VLOOKUP</span>
+
+<span class="skill">Data Validation</span>
+
+<span class="skill">Conditional Formatting</span>
+
+<span class="skill">Charts</span>
+
+</div>
+
+</div>
+
+
+
+<!-- TOOLS -->
+
+<div class="skill-card">
+
+<h3>🛠️ Tools & Technologies</h3>
+
+<div class="skills">
+
+<span class="skill">Git</span>
+
+<span class="skill">GitHub</span>
+
+<span class="skill">Jupyter Notebook</span>
+
+<span class="skill">Streamlit</span>
+
+<span class="skill">Visual Studio Code</span>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EXPERIENCE
+===================================================== -->
+
+<section id="experience">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>EXPERIENCE</span>
+
+<h2>Professional Experience</h2>
+
+<p>
+Practical experience in data analytics and business problem solving.
+</p>
+
+</div>
+
+
+<div class="timeline">
+
+
+<div class="experience">
+
+<h3>
+Deloitte Australia Data Analytics Virtual Experience
+</h3>
+
+<h4>
+Forage
+</h4>
+
+<p>
+
+• Completed practical data analytics tasks involving
+data cleaning, exploratory data analysis, visualization,
+and business problem-solving.
+
+</p>
+
+<p>
+
+• Analyzed business datasets using Excel and presented
+data-driven insights through dashboards.
+
+</p>
+
+<p>
+
+• Communicated analytical findings to support
+business decision-making.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section id="projects">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>PROJECTS</span>
+
+<h2>Featured Projects</h2>
+
+<p>
+Data Analytics, Data Science, Machine Learning and Business Intelligence projects.
+</p>
+
+</div>
+
+
+<div class="projects">
+
+
+<!-- PROJECT 1 -->
+
+<div class="project">
+
+<div class="project-number">
+PROJECT 01
+</div>
+
+<h3>
+Placement Readiness Analysis System
+</h3>
+
+<p>
+
+Built a Decision Tree classification model using
+academic, aptitude, technical, and communication
+data, achieving <strong>89% test accuracy</strong>.
+
+Performed data preprocessing, EDA, feature engineering,
+and model evaluation.
+
+</p>
+
+<div class="tech">
+
+<span>Python</span>
+
+<span>Pandas</span>
+
+<span>NumPy</span>
+
+<span>SQL</span>
+
+<span>Scikit-learn</span>
+
+<span>Decision Tree</span>
+
+<span>Matplotlib</span>
+
+<span>Seaborn</span>
+
+</div>
+
+</div>
+
+
+
+<!-- PROJECT 2 -->
+
+<div class="project">
+
+<div class="project-number">
+PROJECT 02
+</div>
+
+<h3>
+Sales Analysis and Forecasting
+</h3>
+
+<p>
+
+Cleaned and analyzed <strong>50,000+ sales records</strong>,
+handled missing and duplicate values, identified business
+trends, and developed forecasting models with visualizations.
+
+</p>
+
+<div class="tech">
+
+<span>Python</span>
+
+<span>Pandas</span>
+
+<span>NumPy</span>
+
+<span>Scikit-learn</span>
+
+<span>Machine Learning</span>
+
+<span>Matplotlib</span>
+
+<span>Seaborn</span>
+
+<span>Streamlit</span>
+
+</div>
+
+</div>
+
+
+
+<!-- PROJECT 3 -->
+
+<div class="project">
+
+<div class="project-number">
+PROJECT 03
+</div>
+
+<h3>
+UPI Transaction Analytics Dashboard
+</h3>
+
+<p>
+
+Created an interactive Power BI dashboard analyzing
+<strong>100,000+ UPI transactions</strong> using KPI cards,
+DAX measures, filters, and drill-through reports.
+
+</p>
+
+<div class="tech">
+
+<span>Power BI</span>
+
+<span>DAX</span>
+
+<span>Power Query</span>
+
+<span>Excel</span>
+
+<span>Data Analytics</span>
+
+</div>
+
+</div>
+
+
+
+<!-- PROJECT 4 -->
+
+<div class="project">
+
+<div class="project-number">
+PROJECT 04
+</div>
+
+<h3>
+Customer Sales Analysis Dashboard
+</h3>
+
+<p>
+
+Created an interactive Power BI dashboard to analyze
+sales, revenue, customer segments, product performance,
+and monthly sales trends using KPIs, filters, and charts.
+
+</p>
+
+<div class="tech">
+
+<span>Power BI</span>
+
+<span>DAX</span>
+
+<span>Power Query</span>
+
+<span>Excel</span>
+
+<span>Data Visualization</span>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>CONTACT</span>
+
+<h2>Let's Connect</h2>
+
+<p>
+I'm open to Data Analyst, Data Scientist and Python opportunities.
+</p>
+
+</div>
+
+
+<div class="contact-box">
+
+<h2>
+Let's Work Together
+</h2>
+
+<p>
+
+If you're looking for a motivated
+<strong>Data Analyst / Data Scientist</strong>
+with skills in Python, SQL, Machine Learning,
+Power BI and Excel, feel free to reach out.
+
+</p>
+
+
+<div class="contact-links">
+
+
+<a class="contact-link"
+href="mailto:juvr99@gmail.com">
+
+📧 Email
+
+</a>
+
+
+<a class="contact-link"
+href="https://www.linkedin.com/in/juvr99/"
+target="_blank">
+
+💼 LinkedIn
+
+</a>
+
+
+<a class="contact-link"
+href="https://github.com/juvr99"
+target="_blank">
+
+🐙 GitHub
+
+</a>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+© 2026 Joga Uday Vishnu Reddy.
+All Rights Reserved.
+
+</footer>
+
+
+</body>
+
+</html>
